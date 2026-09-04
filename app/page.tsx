@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import LoopVideo from "@/components/LoopVideo";
+import ProgramStrips from "@/components/ProgramStrips";
 
 export default function HomePage() {
   return (
@@ -91,54 +92,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <div className="kicker">Programmes</div>
-            <h2>Four ways to train. Nothing extra.</h2>
-            <p>
-              Give someone too much choice and they choose nothing. Auric is
-              stripped back to the work that matters: one-to-one coaching, run,
-              lift, and perform.
-            </p>
-          </div>
-
-          <div className="program-grid">
-            <Link href="/programmes#one-to-one" className="program-tile">
-              <LoopVideo src="/videos/coaches.mp4" />
-              <div>
-                <div className="kicker">01</div>
-                <h3>1:1 Coaching</h3>
-                <p>Individual programming built around your goal, role and baseline.</p>
-              </div>
-            </Link>
-            <Link href="/programmes#outrun" className="program-tile">
-              <LoopVideo src="/videos/run.mp4" />
-              <div>
-                <div className="kicker">02</div>
-                <h3>Outrun</h3>
-                <p>Build running fitness without giving up strength.</p>
-              </div>
-            </Link>
-            <Link href="/programmes#outlift" className="program-tile">
-              <LoopVideo src="/videos/lift.mp4" />
-              <div>
-                <div className="kicker">03</div>
-                <h3>Outlift</h3>
-                <p>Progressive strength work with clear standards to chase.</p>
-              </div>
-            </Link>
-            <Link href="/programmes#outperform" className="program-tile">
-              <LoopVideo src="/videos/bike.mp4" />
-              <div>
-                <div className="kicker">04</div>
-                <h3>Outperform</h3>
-                <p>Hybrid performance: strength, conditioning and work capacity.</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ProgramStrips />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
