@@ -5,28 +5,34 @@ import { useEffect, useRef, useState } from "react";
 
 const programmes = [
   {
-    href: "/programmes#one-to-one",
-    title: "1:1 Coaching",
-    copy: "Individual programming built around your goal, role and baseline.",
+    href: "/programmes#hybrid-athlete-base-builder",
+    title: "Hybrid Athlete Base Builder",
+    copy: "Structured 1-2-1 coaching for 12 months or less gym experience.",
     video: "/videos/coaches.mp4",
   },
   {
-    href: "/programmes#outrun",
-    title: "Outrun",
-    copy: "Build running fitness without giving up strength.",
-    video: "/videos/run.mp4",
-  },
-  {
-    href: "/programmes#outlift",
-    title: "Outlift",
-    copy: "Progressive strength work with clear standards to chase.",
+    href: "/programmes#advanced-hybrid-athlete",
+    title: "Advanced Hybrid Athlete",
+    copy: "1-2-1 coaching for 12+ months gym experience.",
     video: "/videos/alex-bar.mp4",
   },
   {
-    href: "/programmes#outperform",
-    title: "Outperform",
-    copy: "Hybrid performance: strength, conditioning and work capacity.",
-    video: "/videos/bike.mp4",
+    href: "/programmes#female-hybrid-athlete",
+    title: "Female Hybrid Athlete",
+    copy: "Individualised 1-2-1 coaching for women, at any training age.",
+    video: "/videos/run.mp4",
+  },
+  {
+    href: "/programmes#the-tactical-athlete",
+    title: "The Tactical Athlete",
+    copy: "For serving military and blue-light athletes. Not a pre-joining programme.",
+    video: "/videos/alex-row.mp4",
+  },
+  {
+    href: "/programmes#the-auric-performance-athlete",
+    title: "The Auric Performance Athlete",
+    copy: "The complete Auric 1-2-1 service, with or without gym experience.",
+    video: "/videos/box.mp4",
   },
 ];
 
@@ -74,11 +80,10 @@ export default function ProgramStrips() {
     <>
       <div className="wrap program-strips-intro">
         <div className="kicker">Programmes</div>
-        <h2 className="display">Four ways to train. Nothing extra.</h2>
+        <h2 className="display">Five programmes. Nothing extra.</h2>
         <p>
-          Give someone too much choice and they choose nothing. Auric is
-          stripped back to the work that matters: one-to-one coaching, run,
-          lift, and perform.
+          Choose the 1-2-1 route that matches your experience. Then get on
+          with the work.
         </p>
       </div>
 
@@ -103,7 +108,7 @@ export default function ProgramStrips() {
 
           <div className="wrap program-story-inner">
             <div className="kicker">
-              Programmes {step} / 04
+              Programmes {step} / 05
             </div>
 
             <div className="program-story-text">

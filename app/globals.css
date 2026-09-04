@@ -464,7 +464,7 @@ button {
 
 .program-story {
   position: relative;
-  height: 360vh;
+  height: 450vh;
 }
 
 .program-story-sticky {
@@ -529,17 +529,17 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 36px;
+  top: 56px;
   margin: 0;
   opacity: 0;
   transform: translateY(45px);
   font-family: var(--title);
-  font-size: clamp(64px, 10vw, 140px);
+  font-size: clamp(28px, 5.4vw, 72px);
   font-weight: 400;
   letter-spacing: 0.03em;
-  line-height: 0.88;
+  line-height: 0.92;
   text-transform: uppercase;
-  text-wrap: balance;
+  white-space: nowrap;
   transition: opacity 0.55s ease, transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -1293,7 +1293,7 @@ button {
   }
 
   .program-story {
-    height: 310vh;
+    height: 400vh;
   }
 
   .program-story-text {
@@ -1301,8 +1301,9 @@ button {
   }
 
   .program-story-text h2 {
-    font-size: clamp(52px, 14vw, 92px);
-    top: 48px;
+    font-size: clamp(18px, 6.2vw, 36px);
+    top: 72px;
+    white-space: nowrap;
   }
 
   .program-story-number {
