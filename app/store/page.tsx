@@ -58,7 +58,7 @@ const products = [
     media: { type: "video" as const, src: "/videos/bike.mp4" },
   },
   {
-    featured: false,
+    featured: true,
     meta: "Workout resource",
     title: "Minimal Kit Workouts",
     price: "£120",
