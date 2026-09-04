@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 
 const slides = [
   "/videos/run.mp4",
-  "/videos/bike.mp4",
+  "/videos/alex-bar.mp4",
   "/videos/lift.mp4",
-  "/videos/coaches.mp4",
-  "/videos/box.mp4",
+  "/videos/alex-row.mp4",
 ];
 
 export default function HeroSlideshow() {

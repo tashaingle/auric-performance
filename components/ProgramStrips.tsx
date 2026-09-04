@@ -20,7 +20,7 @@ const programmes = [
     href: "/programmes#outlift",
     title: "Outlift",
     copy: "Progressive strength work with clear standards to chase.",
-    video: "/videos/lift.mp4",
+    video: "/videos/alex-bar.mp4",
   },
   {
     href: "/programmes#outperform",
