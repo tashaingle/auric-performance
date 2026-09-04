@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LoopVideo from "@/components/LoopVideo";
 
 export const metadata: Metadata = {
   title: "Store",
@@ -15,7 +14,8 @@ const products = [
     title: "Nutrition Plan",
     price: "£250",
     copy: "A personalised Auric nutrition plan, built around your training, schedule and goal.",
-    media: { type: "image" as const, src: "/images/gym-coaches.jpg" },
+    image: "/images/gym-coaches.jpg",
+    alt: "Alex and Courtney in the gym",
   },
   {
     featured: false,
@@ -23,7 +23,8 @@ const products = [
     title: "Guide To Recovery",
     price: "£50",
     copy: "How to recover properly so the work you put in actually sticks.",
-    media: { type: "video" as const, src: "/videos/alex.mp4" },
+    image: "/images/recovery.jpg",
+    alt: "Alex after a session",
   },
   {
     featured: false,
@@ -31,7 +32,8 @@ const products = [
     title: "The Eating Out Guide",
     price: "£80",
     copy: "Stay on track without living in a Tupperware box.",
-    media: { type: "image" as const, src: "/images/hero-run.jpg" },
+    image: "/images/together.jpg",
+    alt: "Alex and Courtney between sessions",
   },
   {
     featured: true,
@@ -39,7 +41,8 @@ const products = [
     title: "Human Performance Optimisation",
     price: "£250",
     copy: "The Auric approach to sleep, load, fuel and output — in one resource.",
-    media: { type: "video" as const, src: "/videos/coaches.mp4" },
+    image: "/images/outperform.jpg",
+    alt: "Log carry performance training",
   },
   {
     featured: false,
@@ -47,7 +50,8 @@ const products = [
     title: "Mobility And Flexibility Plan",
     price: "£180",
     copy: "Move better, lift better, stay available for the work that matters.",
-    media: { type: "video" as const, src: "/videos/lift.mp4" },
+    image: "/images/outlift.jpg",
+    alt: "Strength and movement work outdoors",
   },
   {
     featured: false,
@@ -55,7 +59,8 @@ const products = [
     title: "Lack Of Time Workouts",
     price: "£120",
     copy: "Short, structured sessions for weeks when the diary is full.",
-    media: { type: "video" as const, src: "/videos/bike.mp4" },
+    image: "/images/outrun.jpg",
+    alt: "Conditioning on the rower",
   },
   {
     featured: true,
@@ -63,7 +68,8 @@ const products = [
     title: "Minimal Kit Workouts",
     price: "£120",
     copy: "Train properly when equipment is limited, at home or on the road.",
-    media: { type: "video" as const, src: "/videos/box.mp4" },
+    image: "/images/minimal-kit.jpg",
+    alt: "Single dumbbell training outdoors",
   },
 ];
 
@@ -71,7 +77,7 @@ export default function StorePage() {
   return (
     <main>
       <section className="page-hero store-hero">
-        <LoopVideo src="/videos/plates.mp4" />
+        <img src="/images/together.jpg" alt="" />
         <div className="wrap">
           <div className="kicker">Store</div>
           <h1 className="display">
@@ -93,11 +99,7 @@ export default function StorePage() {
               key={product.title}
             >
               <div className="store-card-media">
-                {product.media.type === "video" ? (
-                  <LoopVideo src={product.media.src} />
-                ) : (
-                  <img src={product.media.src} alt="" />
-                )}
+                <img src={product.image} alt={product.alt} />
               </div>
               <div className="store-card-body">
                 <div className="kicker">{product.meta}</div>

@@ -767,6 +767,7 @@ button {
   padding-bottom: 72px;
 }
 
+.store-hero img,
 .store-hero video {
   position: absolute;
   inset: 0;
