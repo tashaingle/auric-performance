@@ -237,11 +237,40 @@ button {
 
 .hero-media img,
 .hero-media video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
-  filter: grayscale(0.25) contrast(1.08) brightness(0.62);
+  object-position: center 22%;
+  filter: grayscale(0.18) contrast(1.08) brightness(0.58);
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.hero-media video.is-active {
+  opacity: 1;
+}
+
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.hero-dots button {
+  width: 34px;
+  height: 3px;
+  padding: 0;
+  background: rgba(232, 228, 219, 0.28);
+}
+
+.hero-dots button.is-active {
+  background: var(--gold);
 }
 
 .hero-media::after {
@@ -421,14 +450,16 @@ button {
   z-index: 1;
 }
 
-.program-tile img {
+.program-tile img,
+.program-tile video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 22%;
   z-index: -2;
-  filter: grayscale(0.3) brightness(0.48) contrast(1.1);
+  filter: grayscale(0.25) brightness(0.5) contrast(1.08);
   transition: transform 0.6s ease, filter 0.6s ease;
 }
 
@@ -440,9 +471,10 @@ button {
   background: linear-gradient(180deg, rgba(14, 13, 12, 0.1), rgba(14, 13, 12, 0.86));
 }
 
-.program-tile:hover img {
+.program-tile:hover img,
+.program-tile:hover video {
   transform: scale(1.05);
-  filter: grayscale(0.1) brightness(0.58) contrast(1.1);
+  filter: grayscale(0.08) brightness(0.62) contrast(1.08);
 }
 
 .program-tile h3 {
@@ -475,14 +507,15 @@ button {
   overflow: hidden;
 }
 
-.band img {
+.band img,
+.band video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
-  filter: grayscale(0.35) brightness(0.42) contrast(1.12);
+  object-position: center 18%;
+  filter: grayscale(0.28) brightness(0.42) contrast(1.1);
 }
 
 .band::after {
@@ -558,11 +591,15 @@ button {
   overflow: hidden;
 }
 
-.program-visual img {
+.program-visual img,
+.program-visual video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.2) contrast(1.08) brightness(0.78);
+  object-position: center 20%;
+  filter: grayscale(0.15) contrast(1.06) brightness(0.78);
 }
 
 .program-copy {

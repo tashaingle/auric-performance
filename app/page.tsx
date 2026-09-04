@@ -1,21 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import LoopVideo from "@/components/LoopVideo";
 
 export default function HomePage() {
   return (
     <main>
       <section className="hero">
-        <div className="hero-media">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/hero-run.jpg"
-          >
-            <source src="/images/hero.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <HeroSlideshow />
         <div className="wrap hero-copy">
           <div className="kicker">Auric Performance</div>
           <h1 className="display">
@@ -113,7 +105,7 @@ export default function HomePage() {
 
           <div className="program-grid">
             <Link href="/programmes#one-to-one" className="program-tile">
-              <Image src="/images/gym-coaches.jpg" alt="" fill sizes="50vw" />
+              <LoopVideo src="/videos/coaches.mp4" />
               <div>
                 <div className="kicker">01</div>
                 <h3>1:1 Coaching</h3>
@@ -121,7 +113,7 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/programmes#outrun" className="program-tile">
-              <Image src="/images/outrun.jpg" alt="" fill sizes="50vw" />
+              <LoopVideo src="/videos/run.mp4" />
               <div>
                 <div className="kicker">02</div>
                 <h3>Outrun</h3>
@@ -129,7 +121,7 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/programmes#outlift" className="program-tile">
-              <Image src="/images/outlift.jpg" alt="" fill sizes="50vw" />
+              <LoopVideo src="/videos/lift.mp4" />
               <div>
                 <div className="kicker">03</div>
                 <h3>Outlift</h3>
@@ -137,7 +129,7 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/programmes#outperform" className="program-tile">
-              <Image src="/images/outperform.jpg" alt="" fill sizes="50vw" />
+              <LoopVideo src="/videos/bike.mp4" />
               <div>
                 <div className="kicker">04</div>
                 <h3>Outperform</h3>
@@ -175,13 +167,7 @@ export default function HomePage() {
       </section>
 
       <section className="band">
-        <Image
-          src="/images/hero-sandbag.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center 22%" }}
-        />
+        <LoopVideo src="/videos/alex.mp4" />
         <div className="wrap band-copy">
           <div className="kicker">Start here</div>
           <h2>

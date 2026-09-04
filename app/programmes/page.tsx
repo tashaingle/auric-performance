@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import LoopVideo from "@/components/LoopVideo";
 
 export const metadata: Metadata = {
   title: "Programmes",
@@ -13,7 +13,7 @@ const programmes = [
     id: "one-to-one",
     kicker: "Programme 01",
     title: "1:1 Coaching",
-    image: "/images/gym-coaches.jpg",
+    image: "/videos/coaches.mp4",
     alt: "Alex and Courtney coaching in the gym",
     intro:
       "Individual coaching built around your goal, role and starting point. Assessment-led, reviewed, and written for the standard you need to reach.",
@@ -27,7 +27,7 @@ const programmes = [
     id: "outrun",
     kicker: "Programme 02",
     title: "Outrun",
-    image: "/images/outrun.jpg",
+    image: "/videos/run.mp4",
     alt: "Auric Performance running and conditioning work",
     intro:
       "Running fitness without losing strength. Outrun builds aerobic capacity, speed and repeatability while protecting the qualities that keep you robust.",
@@ -41,7 +41,7 @@ const programmes = [
     id: "outlift",
     kicker: "Programme 03",
     title: "Outlift",
-    image: "/images/outlift.jpg",
+    image: "/videos/lift.mp4",
     alt: "Strength training with Auric Performance",
     intro:
       "Progressive strength work with a clear destination. Outlift is for people who want to lift heavier, move better and stay consistent.",
@@ -55,7 +55,7 @@ const programmes = [
     id: "outperform",
     kicker: "Programme 04",
     title: "Outperform",
-    image: "/images/outperform.jpg",
+    image: "/videos/bike.mp4",
     alt: "Hybrid performance training outdoors",
     intro:
       "Hybrid performance for people who need to be strong, fit and durable at the same time. Strength, conditioning and work capacity in one system.",
@@ -87,13 +87,7 @@ export default function ProgrammesPage() {
         {programmes.map((programme) => (
           <article className="program-row" id={programme.id} key={programme.id}>
             <div className="program-visual">
-              <Image
-                src={programme.image}
-                alt={programme.alt}
-                fill
-                sizes="(max-width: 980px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
+              <LoopVideo src={programme.image} />
             </div>
             <div className="program-copy">
               <div className="kicker">{programme.kicker}</div>
