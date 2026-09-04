@@ -285,12 +285,12 @@ button {
 .hero-copy {
   position: relative;
   z-index: 2;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .hero .display {
@@ -305,12 +305,19 @@ button {
   white-space: nowrap;
 }
 
+.hero .lead,
+.hero .actions,
+.hero-note,
+.hero-copy .kicker {
+  width: 0;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .hero .lead {
   font-size: 18px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: none;
-  width: 100%;
+  margin: 0;
   text-align: center;
 }
 
@@ -832,7 +839,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: var(--pos, center 42%);
+  object-position: var(--pos, center center);
   filter: grayscale(0.18) contrast(1.06) brightness(0.78);
   transition: transform 0.8s ease, filter 0.5s ease;
 }

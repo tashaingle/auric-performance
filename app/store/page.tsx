@@ -14,9 +14,8 @@ const products = [
     title: "Nutrition Plan",
     price: "£250",
     copy: "A personalised Auric nutrition plan, built around your training, schedule and goal.",
-    image: "/images/gym-coaches.jpg",
-    alt: "Alex and Courtney in the gym",
-    pos: "center 28%",
+    image: "/images/store-nutrition.jpg",
+    alt: "High-protein meal in a black and gold bowl",
   },
   {
     featured: false,
@@ -24,9 +23,8 @@ const products = [
     title: "Guide To Recovery",
     price: "£50",
     copy: "How to recover properly so the work you put in actually sticks.",
-    image: "/images/alex.jpg",
-    alt: "Alex Peterson",
-    pos: "center 18%",
+    image: "/images/store-recovery.jpg",
+    alt: "Foam roller, towel and recovery drink on a gym bench",
   },
   {
     featured: false,
@@ -34,9 +32,8 @@ const products = [
     title: "The Eating Out Guide",
     price: "£80",
     copy: "Stay on track without living in a Tupperware box.",
-    image: "/images/together.jpg",
-    alt: "Alex and Courtney between sessions",
-    pos: "center 52%",
+    image: "/images/store-eating.jpg",
+    alt: "Steak and salad at a dark restaurant table",
   },
   {
     featured: true,
@@ -44,9 +41,8 @@ const products = [
     title: "Human Performance Optimisation",
     price: "£250",
     copy: "The Auric approach to sleep, load, fuel and output — in one resource.",
-    image: "/images/outperform.jpg",
-    alt: "Log carry performance training",
-    pos: "center 55%",
+    image: "/images/store-hpo.jpg",
+    alt: "Stopwatch, notebook and training shoes",
   },
   {
     featured: false,
@@ -54,9 +50,8 @@ const products = [
     title: "Mobility And Flexibility Plan",
     price: "£180",
     copy: "Move better, lift better, stay available for the work that matters.",
-    image: "/images/outlift.jpg",
-    alt: "Strength and movement work outdoors",
-    pos: "center 62%",
+    image: "/images/store-mobility.jpg",
+    alt: "Yoga mat, resistance bands and water bottle",
   },
   {
     featured: false,
@@ -64,9 +59,8 @@ const products = [
     title: "Lack Of Time Workouts",
     price: "£120",
     copy: "Short, structured sessions for weeks when the diary is full.",
-    image: "/images/outrun.jpg",
-    alt: "Conditioning on the rower",
-    pos: "center 40%",
+    image: "/images/store-time.jpg",
+    alt: "Kettlebell and timer on a gym floor",
   },
   {
     featured: true,
@@ -74,9 +68,8 @@ const products = [
     title: "Minimal Kit Workouts",
     price: "£120",
     copy: "Train properly when equipment is limited, at home or on the road.",
-    image: "/images/minimal-kit.jpg",
-    alt: "Single dumbbell training outdoors",
-    pos: "center 48%",
+    image: "/images/store-minimal.jpg",
+    alt: "A single dumbbell on a wooden floor",
   },
 ];
 
@@ -84,7 +77,7 @@ export default function StorePage() {
   return (
     <main>
       <section className="page-hero store-hero">
-        <img src="/images/together.jpg" alt="" />
+        <img src="/images/store-hpo.jpg" alt="" />
         <div className="wrap">
           <div className="kicker">Store</div>
           <h1 className="display">
@@ -105,10 +98,7 @@ export default function StorePage() {
               className={product.featured ? "store-card is-featured" : "store-card"}
               key={product.title}
             >
-              <div
-                className="store-card-media"
-                style={{ ["--pos" as string]: product.pos }}
-              >
+              <div className="store-card-media">
                 <img src={product.image} alt={product.alt} />
               </div>
               <div className="store-card-body">

@@ -36,6 +36,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProgramStrips />
+
       <section className="section coaches">
         <div className="wrap">
           <div className="split-head">
@@ -93,8 +95,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <ProgramStrips />
 
       <section className="band">
         <LoopVideo src="/videos/alex.mp4" />
