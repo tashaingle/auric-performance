@@ -265,8 +265,14 @@ button {
 
 .hero .display {
   margin: 16px 0 22px;
-  font-size: clamp(56px, 9vw, 118px);
-  max-width: 16ch;
+  font-size: clamp(2rem, 7.2vw, 6.25rem);
+  max-width: none;
+  line-height: 0.88;
+}
+
+.hero .hero-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero .lead {
@@ -999,7 +1005,6 @@ button {
     width: calc(100% - 32px);
   }
 
-  .hero .display,
   .page-hero .display {
     font-size: 52px;
   }

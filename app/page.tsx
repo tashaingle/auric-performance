@@ -19,7 +19,8 @@ export default function HomePage() {
         <div className="wrap hero-copy">
           <div className="kicker">Auric Performance</div>
           <h1 className="display">
-            The gold standard in <span>physical performance</span>
+            <span className="hero-line">The gold standard in</span>
+            <span className="hero-line">physical performance</span>
           </h1>
           <p className="lead">
             Evidence-informed performance coaching engineered for the top 1%.
