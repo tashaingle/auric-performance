@@ -223,9 +223,11 @@ button {
   position: relative;
   min-height: 100vh;
   display: grid;
-  align-items: end;
+  align-items: center;
+  justify-items: center;
   padding: calc(var(--header) + 48px) 0 72px;
   overflow: hidden;
+  text-align: center;
 }
 
 .hero-media {
@@ -247,27 +249,36 @@ button {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(14, 13, 12, 0.55) 0%, rgba(14, 13, 12, 0.2) 38%, rgba(14, 13, 12, 0.92) 100%),
-    linear-gradient(90deg, rgba(14, 13, 12, 0.72) 0%, rgba(14, 13, 12, 0.18) 55%, rgba(14, 13, 12, 0.45) 100%);
+    linear-gradient(180deg, rgba(14, 13, 12, 0.5) 0%, rgba(14, 13, 12, 0.28) 42%, rgba(14, 13, 12, 0.88) 100%),
+    radial-gradient(ellipse at center, rgba(14, 13, 12, 0.15) 0%, rgba(14, 13, 12, 0.55) 100%);
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 920px;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero .display {
   margin: 16px 0 22px;
   font-size: clamp(56px, 9vw, 118px);
+  max-width: 16ch;
 }
 
 .hero .lead {
   font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 560px;
 }
 
 .hero .actions {
   margin-top: 32px;
+  justify-content: center;
 }
 
 .hero-note {
@@ -483,6 +494,13 @@ button {
 /* Programme page */
 .page-hero {
   padding: calc(var(--header) + 72px) 0 48px;
+  text-align: center;
+}
+
+.page-hero .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-hero .display {
@@ -491,7 +509,7 @@ button {
 }
 
 .page-hero .lead {
-  margin-top: 22px;
+  margin: 22px auto 0;
 }
 
 .program-list {
@@ -823,7 +841,13 @@ button {
 
   .hero {
     align-items: center;
+    justify-items: center;
     min-height: 92vh;
+  }
+
+  .hero .actions {
+    width: 100%;
+    max-width: 360px;
   }
 
   .contact-people {
