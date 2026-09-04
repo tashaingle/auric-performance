@@ -80,7 +80,7 @@ export default function ProgramStrips() {
     <>
       <div className="wrap program-strips-intro">
         <div className="kicker">Programmes</div>
-        <h2 className="display">Five programmes. Nothing extra.</h2>
+        <h2 className="display">Five programmes.</h2>
         <p>
           Choose the 1-2-1 route that matches your experience. Then get on
           with the work.
