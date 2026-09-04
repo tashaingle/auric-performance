@@ -17,7 +17,8 @@ export default function ContactPage() {
         <div className="wrap">
           <div className="kicker">Contact</div>
           <h1 className="display">
-            Start with the right <span>conversation.</span>
+            <span className="hero-line">Book a call with</span>
+            <span className="hero-line">Alex or Courtney</span>
           </h1>
           <p className="lead">
             Book a call with Alex or Courtney. Tell us what you are preparing
@@ -79,9 +80,13 @@ export default function ContactPage() {
         </aside>
 
         <div className="calendar-frame">
+          <div className="calendar-chrome">
+            <strong>Auric Performance</strong>
+            <span>Book a call with Alex or Courtney · 60 minutes</span>
+          </div>
           <iframe
             src={CALENDAR_SRC}
-            title="Book a call with Auric Performance"
+            title="Book a call with Alex or Courtney"
             loading="lazy"
           />
         </div>

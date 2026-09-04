@@ -607,6 +607,15 @@ button {
   max-width: 860px;
 }
 
+.band h2 .hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.band h2 .hero-line:last-child {
+  color: var(--gold);
+}
+
 .band h2 {
   font-family: var(--title);
   font-size: clamp(46px, 7vw, 88px);
@@ -632,6 +641,11 @@ button {
 .page-hero .display {
   font-size: clamp(52px, 8vw, 104px);
   max-width: 980px;
+}
+
+.page-hero .hero-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .page-hero .lead {
@@ -742,6 +756,132 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+.store-hero {
+  position: relative;
+  min-height: 72vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 72px;
+}
+
+.store-hero video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: grayscale(0.2) brightness(0.38) contrast(1.08);
+}
+
+.store-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 13, 12, 0.55) 0%, rgba(14, 13, 12, 0.35) 45%, rgba(14, 13, 12, 0.82) 100%);
+}
+
+.store-hero .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.store-card {
+  display: grid;
+  grid-template-rows: 280px 1fr;
+  overflow: hidden;
+  background: var(--ink);
+  border: 1px solid rgba(232, 228, 219, 0.1);
+}
+
+.store-card.is-featured {
+  grid-column: span 2;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: 1fr;
+  min-height: 420px;
+}
+
+.store-card-media {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.store-card-media img,
+.store-card-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(0.18) contrast(1.06) brightness(0.78);
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.store-card:hover .store-card-media img,
+.store-card:hover .store-card-media video {
+  transform: scale(1.05);
+  filter: grayscale(0.05) contrast(1.08) brightness(0.88);
+}
+
+.store-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 30px 34px;
+}
+
+.store-card-body h3 {
+  font-family: var(--title);
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 10px 0 8px;
+}
+
+.store-card-body p {
+  margin: 0 0 22px;
+  color: rgba(232, 228, 219, 0.74);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.store-card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.calendar-chrome {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  background: var(--black);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.28);
+}
+
+.calendar-chrome strong {
+  font-family: var(--title);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.calendar-chrome span {
+  font-family: var(--sub);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .offer-card {
@@ -1077,10 +1217,17 @@ button {
   .program-row,
   .program-row:nth-child(even),
   .offer-grid,
+  .store-grid,
+  .store-card.is-featured,
   .notice-bar,
   .contact-grid,
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+
+  .store-card.is-featured {
+    grid-column: auto;
+    grid-template-rows: 260px 1fr;
   }
 
   .program-row:nth-child(even) .program-copy {

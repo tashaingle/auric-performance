@@ -125,7 +125,8 @@ export default function HomePage() {
         <div className="wrap band-copy">
           <div className="kicker">Start here</div>
           <h2>
-            Book a call with <span style={{ color: "var(--gold)" }}>Alex or Courtney</span>
+            <span className="hero-line">Book a call with</span>
+            <span className="hero-line">Alex or Courtney</span>
           </h2>
           <p className="lead">
             Tell us what you are preparing for, recovering from, or trying to
