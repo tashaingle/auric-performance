@@ -462,7 +462,10 @@ button {
 /* Statement band */
 .band {
   position: relative;
-  padding: 110px 0;
+  min-height: 620px;
+  display: grid;
+  align-items: center;
+  padding: 96px 0;
   overflow: hidden;
 }
 
@@ -472,7 +475,16 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.35) brightness(0.38) contrast(1.15);
+  object-position: center 22%;
+  filter: grayscale(0.35) brightness(0.42) contrast(1.12);
+}
+
+.band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(14, 13, 12, 0.28) 0%, rgba(14, 13, 12, 0.55) 55%, rgba(14, 13, 12, 0.82) 100%);
 }
 
 .band-copy {
@@ -601,6 +613,131 @@ button {
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 18px;
+}
+
+.offer-section {
+  padding: 0 0 96px;
+  scroll-margin-top: calc(var(--header) + 24px);
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  padding: 32px 28px;
+  background: var(--ink);
+  border: 1px solid rgba(232, 228, 219, 0.1);
+}
+
+.offer-card.is-featured {
+  border-color: var(--gold);
+  background: linear-gradient(160deg, rgba(201, 168, 76, 0.12), rgba(14, 13, 12, 0.94));
+}
+
+.offer-card h3 {
+  font-family: var(--title);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 12px 0 10px;
+}
+
+.offer-card p {
+  margin: 0 0 16px;
+  color: rgba(232, 228, 219, 0.74);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.offer-card ul {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.offer-card li {
+  position: relative;
+  padding-left: 16px;
+  color: rgba(232, 228, 219, 0.68);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.offer-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.offer-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.offer-price {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--sub);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.offer-stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 10px;
+  border: 1px solid var(--gold);
+  background: rgba(14, 13, 12, 0.86);
+  font-family: var(--sub);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.notice-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.notice-bar h3 {
+  font-family: var(--title);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 6px 0 8px;
+}
+
+.notice-bar p {
+  margin: 0;
+  color: rgba(232, 228, 219, 0.74);
+  line-height: 1.6;
 }
 
 /* Contact */
@@ -822,6 +959,8 @@ button {
   .program-grid,
   .program-row,
   .program-row:nth-child(even),
+  .offer-grid,
+  .notice-bar,
   .contact-grid,
   .footer-inner {
     grid-template-columns: 1fr;

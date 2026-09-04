@@ -147,8 +147,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="split-head">
+            <div>
+              <div className="kicker">Store and plans</div>
+              <h2 className="display" style={{ fontSize: "clamp(42px, 6vw, 76px)", marginTop: 8 }}>
+                Coaching plans and standalone resources
+              </h2>
+            </div>
+            <p>
+              12-week coaching plans live on the programmes page. Nutrition,
+              recovery, mobility and workout resources live in the store. No
+              extra pages, no extra noise.
+            </p>
+          </div>
+          <div className="actions">
+            <Link href="/programmes#plans" className="btn btn-gold">
+              View plans
+            </Link>
+            <Link href="/store" className="btn">
+              Visit the store
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="band">
-        <Image src="/images/hero-sandbag.jpg" alt="" fill sizes="100vw" />
+        <Image
+          src="/images/hero-sandbag.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center 22%" }}
+        />
         <div className="wrap band-copy">
           <div className="kicker">Start here</div>
           <h2>

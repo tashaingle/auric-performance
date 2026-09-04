@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Programmes",
   description:
-    "Auric Performance programmes: 1:1 Coaching, Outrun, Outlift and Outperform.",
+    "Auric Performance programmes and coaching plans: 1:1 Coaching, Outrun, Outlift, Outperform, plus 12-week hybrid athlete plans.",
 };
 
 const programmes = [
@@ -112,6 +112,148 @@ export default function ProgrammesPage() {
           </article>
         ))}
       </section>
+
+      <section className="wrap offer-section" id="plans">
+        <div className="section-head">
+          <div className="kicker">Coaching plans</div>
+          <h2>12-week and full-service plans</h2>
+          <p>
+            Individual coaching plans with weekly WhatsApp check-ins. Current
+            spaces are full while the offering is being updated. Register your
+            interest and we will get you in when capacity opens.
+          </p>
+        </div>
+
+        <aside className="notice-bar">
+          <div>
+            <div className="kicker">Coaching update</div>
+            <h3>Current programme spaces are full</h3>
+            <p>
+              New coaching spaces will open soon. Compare the plans below, then
+              book a call or register your interest.
+            </p>
+          </div>
+          <Link href="/contact" className="btn btn-gold">
+            Register interest
+          </Link>
+        </aside>
+
+        <div className="offer-grid">
+          {plans.map((plan) => (
+            <article
+              className={plan.featured ? "offer-card is-featured" : "offer-card"}
+              key={plan.title}
+            >
+              {plan.full ? (
+                <span className="offer-stamp">
+                  Currently
+                  <br />
+                  full
+                </span>
+              ) : null}
+              <div className="kicker">{plan.meta}</div>
+              <h3>{plan.title}</h3>
+              <span className="offer-price">{plan.price}</span>
+              <p>{plan.copy}</p>
+              <ul>
+                {plan.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <Link href="/contact" className="btn">
+                {plan.full ? "Register interest" : "Enquire"}
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
+
+const plans = [
+  {
+    featured: true,
+    full: true,
+    meta: "12 week 1-2-1 coaching",
+    title: "Hybrid Athlete Base Builder",
+    price: "£600 upfront or £50 per week",
+    copy: "For clients with 12 months or less gym experience who want structured individual coaching and a strong performance foundation.",
+    points: [
+      "12 weeks of 1-2-1 coaching",
+      "Weekly check-ins via WhatsApp",
+      "For 12 months or less gym experience",
+      "Free Nutrition Plan when paid upfront",
+    ],
+  },
+  {
+    featured: false,
+    full: true,
+    meta: "12 week 1-2-1 coaching",
+    title: "Advanced Hybrid Athlete",
+    price: "£600 upfront or £50 per week",
+    copy: "For clients with 12 or more months of gym experience who are ready for a more advanced individual coaching approach.",
+    points: [
+      "12 weeks of 1-2-1 coaching",
+      "Weekly check-ins via WhatsApp",
+      "For 12+ months gym experience",
+      "Free Nutrition Plan when paid upfront",
+    ],
+  },
+  {
+    featured: false,
+    full: true,
+    meta: "12 week 1-2-1 coaching",
+    title: "Female Hybrid Athlete",
+    price: "£600 upfront or £50 per week",
+    copy: "Individualised 1-2-1 coaching for women with or without previous gym experience.",
+    points: [
+      "Suitable with or without gym experience",
+      "Each programme tailored to the individual",
+      "Weekly check-ins via WhatsApp",
+      "Free Nutrition Plan when paid upfront",
+    ],
+  },
+  {
+    featured: true,
+    full: true,
+    meta: "12 week 1-2-1 coaching",
+    title: "The Tactical Athlete",
+    price: "£600 upfront or £50 per week",
+    copy: "For serving tactical athletes across the military and blue-light services. This is not a pre-joining programme.",
+    points: [
+      "For serving military and blue-light personnel",
+      "12 weeks of 1-2-1 coaching",
+      "Weekly check-ins via WhatsApp",
+      "Free Nutrition Plan when paid upfront",
+    ],
+  },
+  {
+    featured: false,
+    full: true,
+    meta: "Full service 1-2-1 coaching",
+    title: "The Auric Performance Athlete",
+    price: "£400 per month or £100 per week",
+    copy: "For clients who want the complete Auric Performance coaching service, with or without previous gym experience.",
+    points: [
+      "Weekly check-ins via WhatsApp",
+      "Free personalised T-shirt",
+      "Nutrition Plan included with weekly option",
+      "One sponsored competition entry per year after 6 months, capped at £800",
+    ],
+  },
+  {
+    featured: false,
+    full: false,
+    meta: "12 week coaching guarantee",
+    title: "Show up. Check in. Back yourself.",
+    price: "Money back guarantee",
+    copy: "All 12-week coaching programmes paid upfront include a money-back guarantee.",
+    points: [
+      "Complete the 12-week programme",
+      "Show up to your workouts",
+      "Check in every week",
+      "If you are not happy after 12 weeks, your upfront coaching fee will be refunded",
+    ],
+  },
+];
