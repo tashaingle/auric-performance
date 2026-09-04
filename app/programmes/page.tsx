@@ -110,7 +110,7 @@ export default function ProgrammesPage() {
       <section className="wrap offer-section" id="plans">
         <div className="section-head">
           <div className="kicker">Coaching plans</div>
-          <h2>12-week and full-service plans</h2>
+          <h2 className="plans-title">12-week and full-service plans</h2>
           <p>
             Individual coaching plans with weekly WhatsApp check-ins. Current
             spaces are full while the offering is being updated. Register your

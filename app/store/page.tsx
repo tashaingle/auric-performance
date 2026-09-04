@@ -16,6 +16,7 @@ const products = [
     copy: "A personalised Auric nutrition plan, built around your training, schedule and goal.",
     image: "/images/gym-coaches.jpg",
     alt: "Alex and Courtney in the gym",
+    pos: "center 28%",
   },
   {
     featured: false,
@@ -23,8 +24,9 @@ const products = [
     title: "Guide To Recovery",
     price: "£50",
     copy: "How to recover properly so the work you put in actually sticks.",
-    image: "/images/recovery.jpg",
-    alt: "Alex after a session",
+    image: "/images/alex.jpg",
+    alt: "Alex Peterson",
+    pos: "center 18%",
   },
   {
     featured: false,
@@ -34,6 +36,7 @@ const products = [
     copy: "Stay on track without living in a Tupperware box.",
     image: "/images/together.jpg",
     alt: "Alex and Courtney between sessions",
+    pos: "center 52%",
   },
   {
     featured: true,
@@ -43,6 +46,7 @@ const products = [
     copy: "The Auric approach to sleep, load, fuel and output — in one resource.",
     image: "/images/outperform.jpg",
     alt: "Log carry performance training",
+    pos: "center 55%",
   },
   {
     featured: false,
@@ -52,6 +56,7 @@ const products = [
     copy: "Move better, lift better, stay available for the work that matters.",
     image: "/images/outlift.jpg",
     alt: "Strength and movement work outdoors",
+    pos: "center 62%",
   },
   {
     featured: false,
@@ -61,6 +66,7 @@ const products = [
     copy: "Short, structured sessions for weeks when the diary is full.",
     image: "/images/outrun.jpg",
     alt: "Conditioning on the rower",
+    pos: "center 40%",
   },
   {
     featured: true,
@@ -70,6 +76,7 @@ const products = [
     copy: "Train properly when equipment is limited, at home or on the road.",
     image: "/images/minimal-kit.jpg",
     alt: "Single dumbbell training outdoors",
+    pos: "center 48%",
   },
 ];
 
@@ -98,7 +105,10 @@ export default function StorePage() {
               className={product.featured ? "store-card is-featured" : "store-card"}
               key={product.title}
             >
-              <div className="store-card-media">
+              <div
+                className="store-card-media"
+                style={{ ["--pos" as string]: product.pos }}
+              >
                 <img src={product.image} alt={product.alt} />
               </div>
               <div className="store-card-body">

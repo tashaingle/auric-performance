@@ -9,7 +9,8 @@ export default function HomePage() {
     <main>
       <section className="hero">
         <HeroSlideshow />
-        <div className="wrap hero-copy">
+        <div className="wrap">
+          <div className="hero-copy">
           <div className="kicker">Auric Performance</div>
           <h1 className="display">
             <span className="hero-line">The gold standard in</span>
@@ -31,6 +32,7 @@ export default function HomePage() {
           <p className="hero-note">
             Strength · Endurance · Work capacity · Measurable progress
           </p>
+          </div>
         </div>
       </section>
 
@@ -94,7 +96,30 @@ export default function HomePage() {
 
       <ProgramStrips />
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="band">
+        <LoopVideo src="/videos/alex.mp4" />
+        <div className="wrap band-copy">
+          <div className="kicker">Start here</div>
+          <h2>
+            <span className="hero-line">Book a call with</span>
+            <span className="hero-line">Alex or Courtney</span>
+          </h2>
+          <p className="lead">
+            Tell us what you are preparing for, recovering from, or trying to
+            improve. We will point you to the right programme.
+          </p>
+          <div className="actions" style={{ marginTop: 28 }}>
+            <Link href="/contact" className="btn btn-gold">
+              Book a call
+            </Link>
+            <a href="mailto:info@auricperformance.co.uk" className="btn">
+              Email info@
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="wrap">
           <div className="split-head">
             <div>
@@ -116,29 +141,6 @@ export default function HomePage() {
             <Link href="/store" className="btn">
               Visit the store
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="band">
-        <LoopVideo src="/videos/alex.mp4" />
-        <div className="wrap band-copy">
-          <div className="kicker">Start here</div>
-          <h2>
-            <span className="hero-line">Book a call with</span>
-            <span className="hero-line">Alex or Courtney</span>
-          </h2>
-          <p className="lead">
-            Tell us what you are preparing for, recovering from, or trying to
-            improve. We will point you to the right programme.
-          </p>
-          <div className="actions" style={{ marginTop: 28 }}>
-            <Link href="/contact" className="btn btn-gold">
-              Book a call
-            </Link>
-            <a href="mailto:info@auricperformance.co.uk" className="btn">
-              Email info@
-            </a>
           </div>
         </div>
       </section>
