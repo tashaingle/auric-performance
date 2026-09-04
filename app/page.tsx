@@ -97,7 +97,7 @@ export default function HomePage() {
       </section>
 
       <section className="band">
-        <LoopVideo src="/videos/alex.mp4" />
+        <LoopVideo src="/videos/alex-row.mp4" />
         <div className="wrap band-copy">
           <div className="kicker">Start here</div>
           <h2>

@@ -604,7 +604,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 42%;
   filter: grayscale(0.28) brightness(0.42) contrast(1.1);
 }
 
@@ -702,7 +702,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 38%;
   filter: grayscale(0.15) contrast(1.06) brightness(0.78);
 }
 
@@ -715,10 +715,11 @@ button {
 
 .program-copy h2 {
   font-family: var(--title);
-  font-size: clamp(42px, 5vw, 68px);
+  font-size: clamp(22px, 3.1vw, 48px);
   font-weight: 400;
   letter-spacing: 0.04em;
   margin: 8px 0 16px;
+  white-space: nowrap;
 }
 
 .program-copy p {

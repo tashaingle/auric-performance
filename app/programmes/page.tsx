@@ -28,7 +28,7 @@ const programmes = [
     id: "advanced-hybrid-athlete",
     kicker: "Programme 02 · 12 week 1-2-1 coaching",
     title: "Advanced Hybrid Athlete",
-    video: "/videos/lift.mp4",
+    video: "/videos/alex-bar.mp4",
     price: "£600 upfront or £50 per week",
     intro:
       "For clients with 12 or more months of gym experience who are ready for a more advanced individual coaching approach.",
@@ -58,7 +58,7 @@ const programmes = [
     id: "the-tactical-athlete",
     kicker: "Programme 04 · 12 week 1-2-1 coaching",
     title: "The Tactical Athlete",
-    video: "/videos/bike.mp4",
+    video: "/videos/alex-row.mp4",
     price: "£600 upfront or £50 per week",
     intro:
       "For serving tactical athletes across the military and blue-light services. This is not a pre-joining programme.",
